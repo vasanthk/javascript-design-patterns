@@ -7,4 +7,6 @@
  * @Reference:
  * http://www.drdobbs.com/web-development/decorator-pattern-in-javascript/232200406
  * http://www.dofactory.com/javascript/decorator-design-pattern
+ * http://nickmeldrum.com/blog/decorators-in-javascript-using-monkey-patching-closures-prototypes-proxies-and-middleware
+ * https://miguelmota.com/blog/exploring-decorators-in-javascript/
  */
