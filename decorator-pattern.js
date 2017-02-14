@@ -24,7 +24,9 @@ sale = sale.decorate('quebec'); // add provincial tax
 sale = sale.decorate('money');  // format like money
 sale.getPrice();                // "$112.88"
 
-// Implementation example
+/**
+ * Implementation - Using Inheritance
+ */
 function Sale(price) {
   this.price = price || 100;
 }
@@ -87,3 +89,56 @@ Sale.prototype.decorate = function (decorator) {
 
 // Call
 sale = sale.decorate('fedtax');
+
+/**
+ * Implementation - Using Lists (No inheritance - Simpler)
+ * Such implementation could also allow for easy undecorating or undoing a decoration, which means simply removing an item from the list of decorators.
+ */
+
+var sale = new Sale(100); // the price is 100 dollars
+sale.decorate('fedtax');  // add federal tax
+sale.decorate('quebec');  // add provincial tax
+sale.decorate('money');   // format like money
+sale.getPrice();          // "$112.88"
+
+function Sale(price) {
+  this.price = (price > 0) || 100;
+  this.decorators_list = [];
+}
+
+Sale.decorators = {};
+
+Sale.decorators.fedtax = {
+  getPrice: function (price) {
+    return price + price * 5 / 100;
+  }
+};
+
+Sale.decorators.quebec = {
+  getPrice: function (price) {
+    return price + price * 7.5 / 100;
+  }
+};
+
+Sale.decorators.money = {
+  getPrice: function (price) {
+    return "$" + price.toFixed(2);
+  }
+};
+
+Sale.prototype.decorate = function (decorator) {
+  this.decorators_list.push(decorator);
+};
+
+Sale.prototype.getPrice = function () {
+  var price = this.price;
+  var i;
+  var max = this.decorators_list.length;
+  var name;
+
+  for (i = 0; i < max; i += 1) {
+    name = this.decorators_list[i];
+    price = Sale.decorators[name].getPrice(price);
+  }
+  return price;
+};
