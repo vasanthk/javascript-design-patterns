@@ -16,3 +16,11 @@
  * https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/ch09s14.html
  * http://stackoverflow.com/questions/2707401/please-help-me-understand-the-decorator-pattern-with-a-real-world-example
  */
+
+// Use case: To support something like this
+var sale = new Sale(100);       // the price is 100 dollars
+sale = sale.decorate('fedtax'); // add federal tax
+sale = sale.decorate('quebec'); // add provincial tax
+sale = sale.decorate('money');  // format like money
+sale.getPrice();                // "$112.88"
+
