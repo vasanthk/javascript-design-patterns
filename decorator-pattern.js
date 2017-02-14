@@ -142,3 +142,8 @@ Sale.prototype.getPrice = function () {
   }
   return price;
 };
+
+// In this sample implementation, getPrice() is the only method that allows decoration.
+// If you want to have more methods that can be decorated, then the part of going through the list of decorators should be repeated by each additional method.
+// However, this can be easily abstracted into a helper method that takes a method and makes it "decoratable."
+// In such an implementation the decorators_list property would become an object with properties named after the methods and values being arrays of decorator objects.
