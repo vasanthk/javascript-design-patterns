@@ -8,6 +8,10 @@
  * You start with your plain object, which has some basic functionality.
  * Then you pick and choose from an available pool of decorators which ones you want to use to enhance your plain object and in which order, if the order is important.
  *
+ * Decorators provide flexibility to statically typed languages by allowing runtime changes as opposed to inheritance which takes place at compile time.
+ * JavaScript, however, is a dynamic language and the ability to extend an object at runtime is baked into the language itself.
+ * For this reason, the Decorator pattern is less relevant to JavaScript developers. In JavaScript the Extend and Mixin patterns subsume the Decorator pattern.
+ *
  * @Reference:
  * http://www.drdobbs.com/web-development/decorator-pattern-in-javascript/232200406
  * http://www.dofactory.com/javascript/decorator-design-pattern
