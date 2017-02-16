@@ -19,6 +19,7 @@
  * https://miguelmota.com/blog/exploring-decorators-in-javascript/
  * https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/ch09s14.html
  * http://stackoverflow.com/questions/2707401/please-help-me-understand-the-decorator-pattern-with-a-real-world-example
+ * https://addyosmani.com/blog/decorator-pattern/
  */
 
 // Use case: To support something like this
