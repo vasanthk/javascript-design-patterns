@@ -12,6 +12,10 @@
  * JavaScript, however, is a dynamic language and the ability to extend an object at runtime is baked into the language itself.
  * For this reason, the Decorator pattern is less relevant to JavaScript developers. In JavaScript the Extend and Mixin patterns subsume the Decorator pattern.
  *
+ * There are two reasons why decorators are cool:
+ * - Decorators can be reused.
+ * - Multiple decorators can be combined for greater flexibility.
+ *
  * @Reference:
  * http://www.drdobbs.com/web-development/decorator-pattern-in-javascript/232200406
  * http://www.dofactory.com/javascript/decorator-design-pattern
@@ -19,6 +23,7 @@
  * https://miguelmota.com/blog/exploring-decorators-in-javascript/
  * https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/ch09s14.html
  * http://stackoverflow.com/questions/2707401/please-help-me-understand-the-decorator-pattern-with-a-real-world-example
+ * http://javascript.info/tutorial/decorators
  * https://addyosmani.com/blog/decorator-pattern/
  */
 
